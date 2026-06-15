@@ -4,7 +4,6 @@
   --muted: #66717c;
   --gold: #b9944d;
   --gold-soft: #ead8ad;
-  --sage: #899a83;
   --mist: #f5f2ed;
   --white: #ffffff;
   --line: rgba(17, 27, 36, 0.13);
@@ -23,7 +22,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--mist);
-  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
   font-weight: 400;
   line-height: 1.65;
 }
@@ -123,7 +122,7 @@ img {
 .hero-media {
   position: absolute;
   inset: 0;
-  background-image: url("assets/generated-hero.png");
+  background-image: url("/assets/generated-hero.png");
   background-position: center;
   background-size: cover;
   transform: scale(1.015);
@@ -147,6 +146,7 @@ img {
 
 .hero-logo {
   width: min(250px, 62vw);
+  height: auto;
   padding: 10px 14px;
   background: rgba(255, 255, 255, 0.94);
   border-radius: 28px 28px 28px 6px;
@@ -180,7 +180,7 @@ p {
 
 h1,
 h2 {
-  font-family: "Fraunces", Georgia, serif;
+  font-family: var(--font-fraunces), Georgia, serif;
   font-weight: 500;
   letter-spacing: 0;
 }
@@ -303,7 +303,7 @@ h3 {
 }
 
 .intro-stat strong {
-  font-family: "Fraunces", Georgia, serif;
+  font-family: var(--font-fraunces), Georgia, serif;
   font-size: clamp(4.5rem, 10vw, 7.5rem);
   font-weight: 500;
   line-height: 0.85;
