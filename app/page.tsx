@@ -5,6 +5,51 @@ const quoteUrl =
   "https://wa.me/263785753731?text=Hello%20Topsum%20Electricals%2C%20I%20would%20like%20a%20quote.";
 const facebookUrl = "https://www.facebook.com/share/1AGLcxaRRm/?mibextid=wwXIfr";
 
+const wattages = ["10W", "20W", "30W", "50W", "100W", "150W", "200W+"];
+
+const serviceCards = [
+  {
+    number: "01",
+    title: "Flood Light Installation",
+    image: "/assets/actual-flood-lights-night-road.jpeg",
+    alt: "Installed flood lights illuminating a residential road at night",
+    copy:
+      "Their major service: flood lights for homes, roads, yards, business premises, churches, schools, entrances, and work sites."
+  },
+  {
+    number: "02",
+    title: "Solar Lights & Street Poles",
+    image: "/assets/actual-solar-pole-installation.jpeg",
+    alt: "Solar lighting poles being installed during the day",
+    copy:
+      "Solar pole lights and outdoor lighting systems for driveways, streets, estates, and areas that need reliable night visibility."
+  },
+  {
+    number: "03",
+    title: "Renovations, Brick Laying & Tiling",
+    image: "/assets/generated-renovation-tiling.png",
+    alt: "Premium renovation and tiling finish",
+    copy:
+      "Renovation work, brick laying, tiling, repairs, and clean finishing for new and existing spaces."
+  },
+  {
+    number: "04",
+    title: "Plumbing & Geysers",
+    image: "/assets/generated-electrical-installation.png",
+    alt: "Clean construction and installation finish",
+    copy:
+      "Plumbing support, geyser installation or replacement, water-line work, and practical maintenance for homes and projects."
+  },
+  {
+    number: "05",
+    title: "BOQs & Plan Drawing",
+    image: "/assets/generated-hero.png",
+    alt: "Modern construction and planning project",
+    copy:
+      "Bill of quantities support, basic plan drawing, construction planning, and material guidance before work starts."
+  }
+];
+
 export default function Home() {
   return (
     <>
@@ -22,11 +67,11 @@ export default function Home() {
               height={200}
               priority
             />
-            <p className="eyebrow">Construction | Tiling | Renovations | Solar Lights | Flood Lights</p>
-            <h1>Premium finishes. Reliable lighting. Built properly.</h1>
+            <p className="eyebrow">Flood Lights | Solar Lights | Plumbing | Geysers | Renovations</p>
+            <h1>Flood lights from 10W upwards. Installed properly.</h1>
             <p className="hero-copy">
-              Topsum Electricals delivers construction, tiling, renovations, solar lighting, and flood light
-              installations for homes, shops, yards, and commercial spaces.
+              Topsum Electricals majors in flood lights and outdoor lighting, with installation options for homes,
+              estates, shops, streets, yards, churches, schools, and work sites.
             </p>
             <div className="hero-actions" aria-label="Contact actions">
               <a className="button primary" href={quoteUrl} target="_blank" rel="noopener">
@@ -38,112 +83,101 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-proof" aria-label="Service highlights">
-            <span>Site work</span>
-            <span>Clean tiling</span>
-            <span>Outdoor lighting</span>
+            <span>10W+</span>
+            <span>Solar poles</span>
+            <span>Flood lights</span>
           </div>
         </section>
 
         <section className="intro" aria-label="Company summary">
           <div className="intro-copy">
             <span className="section-kicker">Topsum Electricals</span>
-            <h2>A contractor-style website presence for a team that handles the practical work.</h2>
+            <h2>Outdoor lighting is the lead service, backed by practical construction and plumbing work.</h2>
             <p>
-              From room upgrades and tile finishes to solar lights and flood lights, the service is built around useful
-              workmanship, clear communication, and neat results.
+              The website now gives flood lights the attention they deserve, while still showing renovations, brick
+              laying, tiling, BOQs, plan drawing, plumbing, and geyser work.
             </p>
           </div>
           <div className="intro-stat">
-            <strong>5</strong>
-            <span>Core service areas handled by one responsive team.</span>
+            <strong>10W+</strong>
+            <span>Flood light wattages supplied and installed from 10W going upwards.</span>
           </div>
         </section>
 
         <section className="services" id="services">
           <div className="section-heading">
             <span className="section-kicker">Services</span>
-            <h2>Built, finished, lit, and secured.</h2>
+            <h2>Lighting first, with the extra trade work clients asked to see.</h2>
           </div>
           <div className="service-grid">
-            <article className="service-card tall">
-              <Image
-                src="/assets/generated-renovation-tiling.png"
-                alt="Premium renovation and tiling finish"
-                width={900}
-                height={720}
-              />
-              <div>
-                <span>01</span>
-                <h3>Construction & Renovations</h3>
-                <p>
-                  General building work, repairs, upgrades, and careful renovation finishes for residential and
-                  commercial spaces.
-                </p>
-              </div>
-            </article>
-            <article className="service-card">
-              <Image
-                src="/assets/generated-renovation-tiling.png"
-                alt="Clean floor tiling and interior renovation"
-                width={900}
-                height={720}
-              />
-              <div>
-                <span>02</span>
-                <h3>Tiling</h3>
-                <p>Floor and wall tiling with clean lines, practical planning, and tidy finishing.</p>
-              </div>
-            </article>
-            <article className="service-card">
-              <Image
-                src="/assets/generated-solar-flood-lights.png"
-                alt="Solar lights and flood lights installed on a property"
-                width={900}
-                height={720}
-              />
-              <div>
-                <span>03</span>
-                <h3>Solar & Flood Lights</h3>
-                <p>Outdoor lighting installation for yards, driveways, entrances, parking areas, shops, and work sites.</p>
-              </div>
-            </article>
+            {serviceCards.map((service, index) => (
+              <article className={index === 0 ? "service-card tall" : "service-card"} key={service.title}>
+                <Image src={service.image} alt={service.alt} width={900} height={720} />
+                <div>
+                  <span>{service.number}</span>
+                  <h3>{service.title}</h3>
+                  <p>{service.copy}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="wattage-band" id="wattages" aria-label="Flood light wattages">
+          <div>
+            <span className="section-kicker">Flood light wattages</span>
+            <h2>Different wattages for different spaces.</h2>
+            <p>
+              Topsum installs flood lights from 10W upwards, helping clients choose the right brightness for small
+              entrances, home yards, business premises, open spaces, and street-style lighting.
+            </p>
+          </div>
+          <div className="wattage-grid">
+            {wattages.map((wattage) => (
+              <span key={wattage}>{wattage}</span>
+            ))}
           </div>
         </section>
 
         <section className="projects" id="projects">
           <div className="projects-copy">
-            <span className="section-kicker">Project look</span>
-            <h2>Images that show the kind of work clients expect before they call.</h2>
+            <span className="section-kicker">Real flood light work</span>
+            <h2>Actual installed lighting from their project photos.</h2>
             <p>
-              A stronger site needs more than a list of services. These visuals give Topsum the same polished, capable
-              feel people expect from serious construction and electrical brands.
+              These road and pole-light photos show the practical side of Topsum's lighting work: lighting streets,
+              improving visibility, and making outdoor spaces safer after dark.
             </p>
             <a className="text-link" href={facebookUrl} target="_blank" rel="noopener">
               View Facebook page
             </a>
           </div>
-          <div className="project-gallery" aria-label="Generated service imagery">
+          <div className="project-gallery" aria-label="Actual flood light project imagery">
             <figure>
-              <Image src="/assets/generated-hero.png" alt="Modern construction and lighting project" width={900} height={1200} />
-              <figcaption>Construction finish</figcaption>
+              <Image
+                src="/assets/actual-flood-lights-corner.jpeg"
+                alt="Flood light installed on a road corner at night"
+                width={768}
+                height={1024}
+              />
+              <figcaption>Road lighting</figcaption>
             </figure>
             <figure>
               <Image
-                src="/assets/generated-electrical-installation.png"
-                alt="Neat electrical installation with installed lighting"
-                width={900}
-                height={600}
+                src="/assets/actual-flood-lights-night-road.jpeg"
+                alt="Multiple flood lights illuminating a residential road"
+                width={960}
+                height={1280}
               />
-              <figcaption>Electrical installation</figcaption>
+              <figcaption>Estate visibility</figcaption>
             </figure>
             <figure>
               <Image
-                src="/assets/generated-solar-flood-lights.png"
-                alt="Outdoor solar and flood light installation"
-                width={900}
-                height={600}
+                src="/assets/actual-solar-poles-daylight.jpeg"
+                alt="Solar lighting poles installed along a road in daylight"
+                width={960}
+                height={1280}
               />
-              <figcaption>Solar and flood lights</figcaption>
+              <figcaption>Solar pole lights</figcaption>
             </figure>
           </div>
         </section>
@@ -153,8 +187,8 @@ export default function Home() {
             <span className="section-kicker">Quote request</span>
             <h2>Send the job details on WhatsApp.</h2>
             <p>
-              Share the service needed, location, preferred timing, and photos of the space. Topsum can respond with
-              next steps and pricing guidance.
+              Share the service needed, wattage if known, location, preferred timing, and photos of the space. Topsum
+              can respond with next steps and pricing guidance.
             </p>
             <div className="contact-actions">
               <a className="button primary" href={quoteUrl} target="_blank" rel="noopener">
@@ -190,7 +224,10 @@ export default function Home() {
       </main>
 
       <footer className="site-footer">
-        <p>&copy; 2026 Topsum Electricals. Construction, tiling, renovations, solar lights installation, and flood lights.</p>
+        <p>
+          &copy; 2026 Topsum Electricals. Flood lights, solar lights, plumbing, geysers, renovations, brick laying, BOQs,
+          plan drawing, construction, and tiling.
+        </p>
       </footer>
     </>
   );

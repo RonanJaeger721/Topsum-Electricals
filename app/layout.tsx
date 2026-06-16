@@ -19,11 +19,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://topsum-electricals.vercel.app"),
   title: "Topsum Electricals | Construction, Renovations & Lighting",
   description:
-    "Topsum Electricals provides premium construction, tiling, renovations, solar lights installation, and flood lights services.",
+    "Topsum Electricals provides flood light installation, solar lights, plumbing, geysers, renovations, brick laying, BOQs, plan drawing, construction, and tiling services.",
   openGraph: {
     title: "Topsum Electricals",
     description:
-      "Construction, tiling, renovations, solar lights installation, and flood lights.",
+      "Flood lights, solar lights, plumbing, geysers, renovations, brick laying, BOQs, plan drawing, construction, and tiling.",
     images: ["/assets/generated-hero.png"]
   }
 };

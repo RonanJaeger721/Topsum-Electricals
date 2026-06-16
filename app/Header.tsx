@@ -37,6 +37,9 @@ export function Header() {
         <a href="#services" onClick={closeMenu}>
           Services
         </a>
+        <a href="#wattages" onClick={closeMenu}>
+          Wattages
+        </a>
         <a href="#projects" onClick={closeMenu}>
           Projects
         </a>
