@@ -4,6 +4,10 @@ import { Header } from "./Header";
 const quoteUrl =
   "https://wa.me/263785753731?text=Hello%20Topsum%20Electricals%2C%20I%20would%20like%20a%20quote.";
 const facebookUrl = "https://www.facebook.com/share/1AGLcxaRRm/?mibextid=wwXIfr";
+const orderUrl = (product: string) =>
+  `https://wa.me/263785753731?text=${encodeURIComponent(
+    `Hello Topsum Electricals, I would like to order/enquire about: ${product}.`
+  )}`;
 
 const wattages = ["10W", "20W", "30W", "50W", "100W", "150W", "200W+"];
 
@@ -47,6 +51,99 @@ const serviceCards = [
     alt: "Modern construction and planning project",
     copy:
       "Bill of quantities support, basic plan drawing, construction planning, and material guidance before work starts."
+  }
+];
+
+const productTiers = [
+  {
+    tier: "Flood light hardware",
+    note: "For home yards, shops, workshops, churches, schools, and open spaces.",
+    products: [
+      {
+        name: "LED Flood Light 50W",
+        image: "/assets/product-led-floodlight-50w.jpg",
+        alt: "50W LED flood light product",
+        details: "IP66 style LED flood light for strong outdoor coverage."
+      },
+      {
+        name: "LED Flood Light Range",
+        image: "/assets/product-led-floodlight-range.jpg",
+        alt: "LED flood light wattage range",
+        details: "10W, 20W, 30W, 40W, 50W, 100W, 200W, 300W and 400W options."
+      },
+      {
+        name: "LED Flood Light Pair",
+        image: "/assets/product-led-floodlight-pair.jpg",
+        alt: "Pair of LED flood lights",
+        details: "Compact flood light units for entrances, walls, and security lighting."
+      }
+    ]
+  },
+  {
+    tier: "Solar light products",
+    note: "Solar kits for spaces that need lighting without heavy wiring.",
+    products: [
+      {
+        name: "Solar Flood Light Range",
+        image: "/assets/product-solar-floodlight-range.jpg",
+        alt: "Solar flood light range with panels",
+        details: "Solar flood lights with panel options for small to larger outdoor areas."
+      },
+      {
+        name: "Solar Light 60W Kit",
+        image: "/assets/product-solar-light-60w.jpg",
+        alt: "60W solar light kit with panel",
+        details: "60W solar light kit with panel, remote-style control, and outdoor housing."
+      }
+    ]
+  },
+  {
+    tier: "Plumbing hardware & fittings",
+    note: "Supply and installation support for plumbing jobs and bathroom work.",
+    products: [
+      {
+        name: "Basin & Tap Set",
+        image: "/assets/product-basin.jpg",
+        alt: "White basin with tap",
+        details: "Bathroom basin and tap fitting for renovation or replacement work."
+      },
+      {
+        name: "Pipework & Fittings",
+        image: "/assets/product-pipework.jpg",
+        alt: "Plumbing pipework installed against brick wall",
+        details: "Pipework, fittings, drainage, and water-line installation support."
+      },
+      {
+        name: "Toilet & Bathroom Plumbing",
+        image: "/assets/product-plumbing-installation.jpg",
+        alt: "Bathroom plumbing installation in progress",
+        details: "Bathroom plumbing installation, maintenance, and fixture replacement."
+      }
+    ]
+  },
+  {
+    tier: "Plans, BOQs & renovation support",
+    note: "Planning and project preparation before construction or renovation work starts.",
+    products: [
+      {
+        name: "Plan Drawing Support",
+        image: "/assets/product-plan-desk.jpg",
+        alt: "Architectural plan drawing desk",
+        details: "Plan drawing support for homes, rooms, renovations, and project planning."
+      },
+      {
+        name: "BOQ & Material Estimate",
+        image: "/assets/product-boq-measure.jpg",
+        alt: "BOQ measurement tools on plan drawings",
+        details: "Bill of quantities and material estimate support for building work."
+      },
+      {
+        name: "Renovation Lighting Finish",
+        image: "/assets/product-renovation-lighting.jpg",
+        alt: "Renovation interior with ceiling lights",
+        details: "Renovation support with lighting, ceiling work, tiling, and finishes."
+      }
+    ]
   }
 ];
 
@@ -135,6 +232,41 @@ export default function Home() {
           <div className="wattage-grid">
             {wattages.map((wattage) => (
               <span key={wattage}>{wattage}</span>
+            ))}
+          </div>
+        </section>
+
+        <section className="hardware" id="hardware">
+          <div className="section-heading">
+            <span className="section-kicker">Hardware products</span>
+            <h2>Order lights, plumbing fittings, and planning support on WhatsApp.</h2>
+            <p>
+              Products are grouped into clear tiers so customers can choose what they need and message Topsum directly
+              for availability, wattage, pricing, and installation.
+            </p>
+          </div>
+          <div className="tier-stack">
+            {productTiers.map((tier) => (
+              <section className="product-tier" key={tier.tier} aria-label={tier.tier}>
+                <div className="tier-heading">
+                  <span className="section-kicker">{tier.tier}</span>
+                  <p>{tier.note}</p>
+                </div>
+                <div className="product-grid">
+                  {tier.products.map((product) => (
+                    <article className="product-card" key={product.name}>
+                      <Image src={product.image} alt={product.alt} width={760} height={760} />
+                      <div>
+                        <h3>{product.name}</h3>
+                        <p>{product.details}</p>
+                        <a className="order-link" href={orderUrl(product.name)} target="_blank" rel="noopener">
+                          Order on WhatsApp
+                        </a>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
             ))}
           </div>
         </section>

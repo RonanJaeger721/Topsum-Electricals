@@ -40,6 +40,9 @@ export function Header() {
         <a href="#wattages" onClick={closeMenu}>
           Wattages
         </a>
+        <a href="#hardware" onClick={closeMenu}>
+          Products
+        </a>
         <a href="#projects" onClick={closeMenu}>
           Projects
         </a>

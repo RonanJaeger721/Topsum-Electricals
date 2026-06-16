@@ -271,6 +271,7 @@ h3 {
 .intro,
 .services,
 .wattage-band,
+.hardware,
 .projects,
 .contact {
   width: min(1180px, calc(100% - 36px));
@@ -419,6 +420,97 @@ h3 {
   font-weight: 500;
 }
 
+.hardware {
+  padding: clamp(64px, 8vw, 108px) 0 0;
+}
+
+.hardware .section-heading p {
+  max-width: 740px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.tier-stack {
+  display: grid;
+  gap: 20px;
+}
+
+.product-tier {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.64);
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  border-radius: 44px 10px 44px 44px;
+  box-shadow: 0 18px 55px rgba(17, 27, 36, 0.08);
+}
+
+.tier-heading {
+  position: sticky;
+  top: 112px;
+  padding: 18px;
+}
+
+.tier-heading p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.product-card {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 250px auto;
+  min-height: 470px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 32px 8px 32px 32px;
+  box-shadow: 0 14px 34px rgba(17, 27, 36, 0.08);
+}
+
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #eef0ef;
+}
+
+.product-card div {
+  display: grid;
+  align-content: start;
+  padding: 20px;
+}
+
+.product-card h3 {
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.order-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+  padding: 0 18px;
+  color: var(--ink);
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 .projects {
   display: grid;
   grid-template-columns: 0.82fr 1.18fr;
@@ -537,6 +629,7 @@ dd {
 @media (max-width: 1020px) {
   .service-grid,
   .wattage-band,
+  .product-tier,
   .projects,
   .contact {
     grid-template-columns: 1fr;
@@ -556,6 +649,15 @@ dd {
 
   .wattage-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .tier-heading {
+    position: static;
+    padding: 8px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -666,5 +768,23 @@ dd {
 
   .wattage-grid span {
     min-height: 68px;
+  }
+
+  .hardware {
+    width: min(1180px, calc(100% - 24px));
+  }
+
+  .product-tier {
+    padding: 14px;
+    border-radius: 34px 8px 34px 34px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    grid-template-rows: 230px auto;
+    min-height: 0;
   }
 }
