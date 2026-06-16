@@ -271,6 +271,7 @@ h3 {
 .intro,
 .services,
 .brickwork-showcase,
+.aluminium-showcase,
 .fencing-showcase,
 .street-light-strip,
 .wattage-band,
@@ -422,6 +423,52 @@ h3 {
 }
 
 .brickwork-card figcaption {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  padding: 9px 14px;
+  color: var(--white);
+  background: rgba(17, 27, 36, 0.72);
+  border-radius: 999px;
+  font-size: 0.84rem;
+  backdrop-filter: blur(10px);
+}
+
+.aluminium-showcase {
+  padding: 0 0 clamp(56px, 8vw, 92px);
+}
+
+.aluminium-showcase .section-heading p {
+  max-width: 740px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.aluminium-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.aluminium-card {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  min-height: 290px;
+  aspect-ratio: 3 / 2;
+  background: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  border-radius: 34px 8px 34px 34px;
+  box-shadow: 0 18px 55px rgba(17, 27, 36, 0.08);
+}
+
+.aluminium-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aluminium-card figcaption {
   position: absolute;
   left: 18px;
   bottom: 18px;
@@ -784,6 +831,7 @@ dd {
 @media (max-width: 1020px) {
   .service-grid,
   .brickwork-grid,
+  .aluminium-grid,
   .fencing-grid,
   .street-light-grid,
   .wattage-band,
@@ -809,6 +857,10 @@ dd {
   .brickwork-card.wide {
     min-height: 250px;
     grid-column: auto;
+  }
+
+  .aluminium-card {
+    min-height: 250px;
   }
 
   .fencing-card,
@@ -913,6 +965,7 @@ dd {
   }
 
   .brickwork-grid,
+  .aluminium-grid,
   .fencing-grid,
   .street-light-grid {
     grid-template-columns: 1fr;

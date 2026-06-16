@@ -30,11 +30,11 @@ const serviceCards = [
   },
   {
     number: "03",
-    title: "Renovations, Brick Laying & Tiling",
-    image: "/assets/actual-brickwork-foundation.jpg",
-    alt: "Brick work foundation walls under construction",
+    title: "Renovations, Brick Work, Tiling & Aluminium Frames",
+    image: "/assets/actual-aluminium-door-frame.jpeg",
+    alt: "Aluminium door frame and glass installation inside a finished room",
     copy:
-      "Renovation work, brick laying, tiling, repairs, and clean finishing for new and existing spaces."
+      "Renovation work, brick laying, tiling, aluminium window frames, glass fitting, repairs, and clean finishing for new and existing spaces."
   },
   {
     number: "04",
@@ -87,6 +87,19 @@ const brickworkShots = [
     image: "/assets/actual-brickwork-level.jpg",
     alt: "Brick corner being checked with a level",
     label: "Straight, level finishes"
+  }
+];
+
+const aluminiumShots = [
+  {
+    image: "/assets/actual-aluminium-window-frame.jpeg",
+    alt: "Aluminium window frame with fitted glass in a finished interior",
+    label: "Aluminium window frame"
+  },
+  {
+    image: "/assets/actual-aluminium-door-frame.jpeg",
+    alt: "Aluminium framed glass doors installed in a finished interior space",
+    label: "Aluminium door and glass"
   }
 ];
 
@@ -269,8 +282,8 @@ export default function Home() {
             <h2>Outdoor lighting leads, backed by solar, inverter, building, plumbing, and fencing work.</h2>
             <p>
               Get dependable flood lights, solar lighting, solar inverter installations, renovations, brick laying,
-              tiling, barbed wire fencing, chain-link fence work, electric fence support, plumbing, geysers, BOQs,
-              and plan drawing from one responsive team.
+              tiling, aluminium window frames, glass fitting, barbed wire fencing, chain-link fence work, electric
+              fence support, plumbing, geysers, BOQs, and plan drawing from one responsive team.
             </p>
           </div>
           <div className="intro-stat">
@@ -310,6 +323,25 @@ export default function Home() {
           <div className="brickwork-grid">
             {brickworkShots.map((shot, index) => (
               <figure className={index === 0 ? "brickwork-card wide" : "brickwork-card"} key={shot.image}>
+                <Image src={shot.image} alt={shot.alt} width={960} height={1280} />
+                <figcaption>{shot.label}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+
+        <section className="aluminium-showcase" aria-label="Aluminium window frames and glass">
+          <div className="section-heading">
+            <span className="section-kicker">Construction finish</span>
+            <h2>Aluminium window frames and glass installations.</h2>
+            <p>
+              Topsum also handles aluminium window frames, glazed openings, and neat fitted glass finishes for homes,
+              extensions, and completed interior spaces.
+            </p>
+          </div>
+          <div className="aluminium-grid">
+            {aluminiumShots.map((shot) => (
+              <figure className="aluminium-card" key={shot.image}>
                 <Image src={shot.image} alt={shot.alt} width={960} height={1280} />
                 <figcaption>{shot.label}</figcaption>
               </figure>
@@ -497,7 +529,8 @@ export default function Home() {
       <footer className="site-footer">
         <p>
           &copy; 2026 Topsum Electricals. Flood lights, solar lights, solar inverters, fencing, electric fences,
-          plumbing, geysers, renovations, brick laying, BOQs, plan drawing, construction, and tiling.
+          plumbing, geysers, renovations, brick laying, aluminium window frames, glass fitting, BOQs, plan drawing,
+          construction, and tiling.
         </p>
       </footer>
     </>
