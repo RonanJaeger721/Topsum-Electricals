@@ -191,8 +191,8 @@ export default function Home() {
             <span className="section-kicker">Topsum Electricals</span>
             <h2>Outdoor lighting is the lead service, backed by practical construction and plumbing work.</h2>
             <p>
-              The website now gives flood lights the attention they deserve, while still showing renovations, brick
-              laying, tiling, BOQs, plan drawing, plumbing, and geyser work.
+              Get dependable flood lights, solar lighting, renovations, brick laying, tiling, BOQs, plan drawing,
+              plumbing, and geyser work from one responsive team.
             </p>
           </div>
           <div className="intro-stat">
@@ -204,7 +204,7 @@ export default function Home() {
         <section className="services" id="services">
           <div className="section-heading">
             <span className="section-kicker">Services</span>
-            <h2>Lighting first, with the extra trade work clients asked to see.</h2>
+            <h2>Outdoor lighting, building work, and essential property services.</h2>
           </div>
           <div className="service-grid">
             {serviceCards.map((service, index) => (
