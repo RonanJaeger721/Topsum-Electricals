@@ -31,8 +31,8 @@ const serviceCards = [
   {
     number: "03",
     title: "Renovations, Brick Laying & Tiling",
-    image: "/assets/generated-renovation-tiling.png",
-    alt: "Premium renovation and tiling finish",
+    image: "/assets/actual-brickwork-foundation.jpg",
+    alt: "Brick work foundation walls under construction",
     copy:
       "Renovation work, brick laying, tiling, repairs, and clean finishing for new and existing spaces."
   },
@@ -64,6 +64,29 @@ const streetLightShots = [
     image: "/assets/actual-street-light-pole-day.jpeg",
     alt: "Street light poles installed beside a roadside property",
     label: "Street pole installation"
+  }
+];
+
+const brickworkShots = [
+  {
+    image: "/assets/actual-brickwork-foundation.jpg",
+    alt: "Brick work foundation walls under construction",
+    label: "Foundation brick work"
+  },
+  {
+    image: "/assets/actual-brickwork-crew.jpg",
+    alt: "Brick laying crew building block walls on site",
+    label: "On-site wall construction"
+  },
+  {
+    image: "/assets/actual-brickwork-closeup.jpg",
+    alt: "Close-up of brick laying with mortar",
+    label: "Brick laying detail"
+  },
+  {
+    image: "/assets/actual-brickwork-level.jpg",
+    alt: "Brick corner being checked with a level",
+    label: "Straight, level finishes"
   }
 ];
 
@@ -229,6 +252,25 @@ export default function Home() {
                   <p>{service.copy}</p>
                 </div>
               </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="brickwork-showcase" aria-label="Brick work and brick laying">
+          <div className="section-heading">
+            <span className="section-kicker">Brick work</span>
+            <h2>Real brick work and brick laying from site.</h2>
+            <p>
+              From foundation lines and boundary walls to straight courses and clean wall buildup, these photos show
+              the practical brick work side of Topsum&apos;s construction service.
+            </p>
+          </div>
+          <div className="brickwork-grid">
+            {brickworkShots.map((shot, index) => (
+              <figure className={index === 0 ? "brickwork-card wide" : "brickwork-card"} key={shot.image}>
+                <Image src={shot.image} alt={shot.alt} width={960} height={1280} />
+                <figcaption>{shot.label}</figcaption>
+              </figure>
             ))}
           </div>
         </section>
