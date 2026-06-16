@@ -447,15 +447,17 @@ h3 {
 .aluminium-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 14px;
 }
 
 .aluminium-card {
   position: relative;
   overflow: hidden;
   margin: 0;
-  min-height: 290px;
-  aspect-ratio: 3 / 2;
+  min-height: 220px;
+  aspect-ratio: 7 / 5;
   background: var(--white);
   border: 1px solid rgba(255, 255, 255, 0.86);
   border-radius: 34px 8px 34px 34px;
@@ -860,7 +862,7 @@ dd {
   }
 
   .aluminium-card {
-    min-height: 250px;
+    min-height: 220px;
   }
 
   .fencing-card,
