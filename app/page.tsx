@@ -39,8 +39,8 @@ const serviceCards = [
   {
     number: "04",
     title: "Plumbing & Geysers",
-    image: "/assets/generated-electrical-installation.png",
-    alt: "Clean construction and installation finish",
+    image: "/assets/product-plumbing-installation.jpg",
+    alt: "Bathroom plumbing installation in progress",
     copy:
       "Plumbing support, geyser installation or replacement, water-line work, and practical maintenance for homes and projects."
   },
