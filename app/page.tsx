@@ -23,8 +23,8 @@ const serviceCards = [
   {
     number: "02",
     title: "Solar Lights & Street Poles",
-    image: "/assets/actual-solar-pole-installation.jpeg",
-    alt: "Solar lighting poles being installed during the day",
+    image: "/assets/actual-street-light-road-day.jpeg",
+    alt: "Street lights installed along a curved road in daylight",
     copy:
       "Solar pole lights and outdoor lighting systems for driveways, streets, estates, and areas that need reliable night visibility."
   },
@@ -51,6 +51,19 @@ const serviceCards = [
     alt: "Modern construction and planning project",
     copy:
       "Bill of quantities support, basic plan drawing, construction planning, and material guidance before work starts."
+  }
+];
+
+const streetLightShots = [
+  {
+    image: "/assets/actual-street-light-road-day.jpeg",
+    alt: "Street lights installed along a curved road in daylight",
+    label: "Street light road view"
+  },
+  {
+    image: "/assets/actual-street-light-pole-day.jpeg",
+    alt: "Street light poles installed beside a roadside property",
+    label: "Street pole installation"
   }
 ];
 
@@ -216,6 +229,25 @@ export default function Home() {
                   <p>{service.copy}</p>
                 </div>
               </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="street-light-strip" aria-label="Street light installations">
+          <div className="section-heading">
+            <span className="section-kicker">Street lights</span>
+            <h2>More real street-light installations from site.</h2>
+            <p>
+              These daytime photos show installed street and roadside pole lights in active residential areas, adding
+              another real example under the street-light work.
+            </p>
+          </div>
+          <div className="street-light-grid">
+            {streetLightShots.map((shot) => (
+              <figure className="street-light-card" key={shot.image}>
+                <Image src={shot.image} alt={shot.alt} width={720} height={1280} />
+                <figcaption>{shot.label}</figcaption>
+              </figure>
             ))}
           </div>
         </section>
