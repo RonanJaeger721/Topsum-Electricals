@@ -46,11 +46,11 @@ const serviceCards = [
   },
   {
     number: "05",
-    title: "BOQs & Plan Drawing",
-    image: "/assets/generated-hero.png",
-    alt: "Modern construction and planning project",
+    title: "Barbed Wire, Fencing & Electric Fences",
+    image: "/assets/actual-fencing-barbed-wire-line.jpeg",
+    alt: "Installed barbed wire fencing along a field boundary",
     copy:
-      "Bill of quantities support, basic plan drawing, construction planning, and material guidance before work starts."
+      "Barbed wire lines, chain-link fencing, gate sections, and electric fence support for plots, farms, homes, and site boundaries."
   }
 ];
 
@@ -87,6 +87,39 @@ const brickworkShots = [
     image: "/assets/actual-brickwork-level.jpg",
     alt: "Brick corner being checked with a level",
     label: "Straight, level finishes"
+  }
+];
+
+const fencingShots = [
+  {
+    image: "/assets/actual-fencing-barbed-wire-line.jpeg",
+    alt: "Installed barbed wire fence line across a field boundary",
+    label: "Barbed-wire perimeter line"
+  },
+  {
+    image: "/assets/actual-fencing-barbed-wire-close.jpeg",
+    alt: "Close detail of barbed wire fence posts and lines",
+    label: "Fence line detail"
+  },
+  {
+    image: "/assets/actual-fencing-chainlink-gate-left.jpeg",
+    alt: "Chain-link fencing and gate section installed on site",
+    label: "Chain-link entrance section"
+  },
+  {
+    image: "/assets/actual-fencing-chainlink-gate-right.jpeg",
+    alt: "Metal gate frame and fence section under installation",
+    label: "Gate frame installation"
+  },
+  {
+    image: "/assets/actual-fencing-field-run.jpeg",
+    alt: "Long-run boundary fence installed across an open field",
+    label: "Long-run boundary fencing"
+  },
+  {
+    image: "/assets/actual-fencing-gate-line.jpeg",
+    alt: "Fence line leading toward a gate opening on a rural plot",
+    label: "Farm and plot fence line"
   }
 ];
 
@@ -200,7 +233,7 @@ export default function Home() {
               height={200}
               priority
             />
-            <p className="eyebrow">Flood Lights | Solar Lights | Plumbing | Geysers | Renovations</p>
+            <p className="eyebrow">Flood Lights | Solar Lights | Plumbing | Fencing | Renovations</p>
             <h1>Flood lights from 10W upwards. Installed properly.</h1>
             <p className="hero-copy">
               Topsum Electricals majors in flood lights and outdoor lighting, with installation options for homes,
@@ -217,18 +250,20 @@ export default function Home() {
           </div>
           <div className="hero-proof" aria-label="Service highlights">
             <span>10W+</span>
-            <span>Solar poles</span>
             <span>Flood lights</span>
+            <span>Solar poles</span>
+            <span>Fencing</span>
           </div>
         </section>
 
         <section className="intro" aria-label="Company summary">
           <div className="intro-copy">
             <span className="section-kicker">Topsum Electricals</span>
-            <h2>Outdoor lighting is the lead service, backed by practical construction and plumbing work.</h2>
+            <h2>Outdoor lighting leads, backed by practical building, plumbing, and fencing work.</h2>
             <p>
-              Get dependable flood lights, solar lighting, renovations, brick laying, tiling, BOQs, plan drawing,
-              plumbing, and geyser work from one responsive team.
+              Get dependable flood lights, solar lighting, renovations, brick laying, tiling, barbed wire fencing,
+              chain-link fence work, electric fence support, plumbing, geysers, BOQs, and plan drawing from one
+              responsive team.
             </p>
           </div>
           <div className="intro-stat">
@@ -268,6 +303,25 @@ export default function Home() {
           <div className="brickwork-grid">
             {brickworkShots.map((shot, index) => (
               <figure className={index === 0 ? "brickwork-card wide" : "brickwork-card"} key={shot.image}>
+                <Image src={shot.image} alt={shot.alt} width={960} height={1280} />
+                <figcaption>{shot.label}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+
+        <section className="fencing-showcase" id="fencing" aria-label="Barbed wire, fencing, and electric fences">
+          <div className="section-heading">
+            <span className="section-kicker">Fencing</span>
+            <h2>Barbed wire, fencing, and perimeter security work.</h2>
+            <p>
+              Topsum also handles barbed wire fencing, chain-link fence sections, gate lines, and electric fence
+              support for farms, plots, homes, and wider site boundaries.
+            </p>
+          </div>
+          <div className="fencing-grid">
+            {fencingShots.map((shot, index) => (
+              <figure className={index === 0 || index === 3 ? "fencing-card wide" : "fencing-card"} key={shot.image}>
                 <Image src={shot.image} alt={shot.alt} width={960} height={1280} />
                 <figcaption>{shot.label}</figcaption>
               </figure>
@@ -431,8 +485,8 @@ export default function Home() {
 
       <footer className="site-footer">
         <p>
-          &copy; 2026 Topsum Electricals. Flood lights, solar lights, plumbing, geysers, renovations, brick laying, BOQs,
-          plan drawing, construction, and tiling.
+          &copy; 2026 Topsum Electricals. Flood lights, solar lights, fencing, electric fences, plumbing, geysers,
+          renovations, brick laying, BOQs, plan drawing, construction, and tiling.
         </p>
       </footer>
     </>

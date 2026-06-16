@@ -271,6 +271,7 @@ h3 {
 .intro,
 .services,
 .brickwork-showcase,
+.fencing-showcase,
 .street-light-strip,
 .wattage-band,
 .hardware,
@@ -419,6 +420,57 @@ h3 {
 }
 
 .brickwork-card figcaption {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  padding: 9px 14px;
+  color: var(--white);
+  background: rgba(17, 27, 36, 0.72);
+  border-radius: 999px;
+  font-size: 0.84rem;
+  backdrop-filter: blur(10px);
+}
+
+.fencing-showcase {
+  padding: 6px 0 clamp(56px, 8vw, 92px);
+}
+
+.fencing-showcase .section-heading p {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.fencing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.fencing-card {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  min-height: 320px;
+  background: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  border-radius: 36px 8px 36px 36px;
+  box-shadow: 0 18px 55px rgba(17, 27, 36, 0.08);
+}
+
+.fencing-card.wide {
+  grid-column: span 2;
+  min-height: 420px;
+  border-radius: 8px 48px 48px 48px;
+}
+
+.fencing-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fencing-card figcaption {
   position: absolute;
   left: 18px;
   bottom: 18px;
@@ -727,6 +779,7 @@ dd {
 @media (max-width: 1020px) {
   .service-grid,
   .brickwork-grid,
+  .fencing-grid,
   .street-light-grid,
   .wattage-band,
   .product-tier,
@@ -749,6 +802,12 @@ dd {
 
   .brickwork-card,
   .brickwork-card.wide {
+    min-height: 320px;
+    grid-column: auto;
+  }
+
+  .fencing-card,
+  .fencing-card.wide {
     min-height: 320px;
     grid-column: auto;
   }
@@ -849,6 +908,7 @@ dd {
   }
 
   .brickwork-grid,
+  .fencing-grid,
   .street-light-grid {
     grid-template-columns: 1fr;
   }
