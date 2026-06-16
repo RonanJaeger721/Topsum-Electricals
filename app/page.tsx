@@ -22,11 +22,11 @@ const serviceCards = [
   },
   {
     number: "02",
-    title: "Solar Lights & Street Poles",
+    title: "Solar Lights, Inverters & Street Poles",
     image: "/assets/actual-street-light-road-day.jpeg",
     alt: "Street lights installed along a curved road in daylight",
     copy:
-      "Solar pole lights and outdoor lighting systems for driveways, streets, estates, and areas that need reliable night visibility."
+      "Solar pole lights, inverter installations, and outdoor power-lighting systems for homes, driveways, streets, estates, and areas that need reliable backup and night visibility."
   },
   {
     number: "03",
@@ -149,8 +149,8 @@ const productTiers = [
     ]
   },
   {
-    tier: "Solar light products",
-    note: "Solar kits for spaces that need lighting without heavy wiring.",
+    tier: "Solar lights & inverter systems",
+    note: "Solar kits, inverter-ready setups, and installation support for spaces that need reliable lighting and backup power.",
     products: [
       {
         name: "Solar Flood Light Range",
@@ -163,6 +163,12 @@ const productTiers = [
         image: "/assets/product-solar-light-60w.jpg",
         alt: "60W solar light kit with panel",
         details: "60W solar light kit with panel, remote-style control, and outdoor housing."
+      },
+      {
+        name: "Solar Inverter Installation Support",
+        image: "/assets/product-solar-floodlight-range.jpg",
+        alt: "Solar power hardware used to represent inverter installation support",
+        details: "Support for solar inverter setup, installation planning, and backup power solutions for homes and small sites."
       }
     ]
   },
@@ -233,11 +239,11 @@ export default function Home() {
               height={200}
               priority
             />
-            <p className="eyebrow">Flood Lights | Solar Lights | Plumbing | Fencing | Renovations</p>
+            <p className="eyebrow">Flood Lights | Solar Lights | Solar Inverters | Plumbing | Fencing</p>
             <h1>Flood lights from 10W upwards. Installed properly.</h1>
             <p className="hero-copy">
-              Topsum Electricals majors in flood lights and outdoor lighting, with installation options for homes,
-              estates, shops, streets, yards, churches, schools, and work sites.
+              Topsum Electricals majors in flood lights and outdoor lighting, with solar, inverter, and installation
+              options for homes, estates, shops, streets, yards, churches, schools, and work sites.
             </p>
             <div className="hero-actions" aria-label="Contact actions">
               <a className="button primary" href={quoteUrl} target="_blank" rel="noopener">
@@ -252,6 +258,7 @@ export default function Home() {
             <span>10W+</span>
             <span>Flood lights</span>
             <span>Solar poles</span>
+            <span>Inverters</span>
             <span>Fencing</span>
           </div>
         </section>
@@ -259,11 +266,11 @@ export default function Home() {
         <section className="intro" aria-label="Company summary">
           <div className="intro-copy">
             <span className="section-kicker">Topsum Electricals</span>
-            <h2>Outdoor lighting leads, backed by practical building, plumbing, and fencing work.</h2>
+            <h2>Outdoor lighting leads, backed by solar, inverter, building, plumbing, and fencing work.</h2>
             <p>
-              Get dependable flood lights, solar lighting, renovations, brick laying, tiling, barbed wire fencing,
-              chain-link fence work, electric fence support, plumbing, geysers, BOQs, and plan drawing from one
-              responsive team.
+              Get dependable flood lights, solar lighting, solar inverter installations, renovations, brick laying,
+              tiling, barbed wire fencing, chain-link fence work, electric fence support, plumbing, geysers, BOQs,
+              and plan drawing from one responsive team.
             </p>
           </div>
           <div className="intro-stat">
@@ -367,7 +374,7 @@ export default function Home() {
         <section className="hardware" id="hardware">
           <div className="section-heading">
             <span className="section-kicker">Hardware products</span>
-            <h2>Order lights, plumbing fittings, and planning support on WhatsApp.</h2>
+            <h2>Order lights, solar power gear, plumbing fittings, and planning support on WhatsApp.</h2>
             <p>
               Products are grouped into clear tiers so customers can choose what they need and message Topsum directly
               for availability, wattage, pricing, and installation.
@@ -463,10 +470,14 @@ export default function Home() {
             <Image src="/assets/topsum-logo-cropped.png" alt="" width={360} height={249} />
             <dl>
               <div>
-                <dt>WhatsApp</dt>
+                <dt>Contacts</dt>
                 <dd>
-                  <a href="https://wa.me/263785753731" target="_blank" rel="noopener">
-                    078 575 3731
+                  <a href="tel:+263785753731">
+                    +263785753731
+                  </a>
+                  <span> / </span>
+                  <a href="tel:+263715316477">
+                    +263715316477
                   </a>
                 </dd>
               </div>
@@ -485,8 +496,8 @@ export default function Home() {
 
       <footer className="site-footer">
         <p>
-          &copy; 2026 Topsum Electricals. Flood lights, solar lights, fencing, electric fences, plumbing, geysers,
-          renovations, brick laying, BOQs, plan drawing, construction, and tiling.
+          &copy; 2026 Topsum Electricals. Flood lights, solar lights, solar inverters, fencing, electric fences,
+          plumbing, geysers, renovations, brick laying, BOQs, plan drawing, construction, and tiling.
         </p>
       </footer>
     </>
