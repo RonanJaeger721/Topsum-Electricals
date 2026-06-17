@@ -30,11 +30,11 @@ const serviceCards = [
   },
   {
     number: "03",
-    title: "Ceilings, Brick Work & Aluminium Frames",
-    image: "/assets/actual-aluminium-door-frame.jpeg",
-    alt: "Aluminium door frame and glass installation inside a finished room",
+    title: "Ceilings, Finishes & Aluminium Frames",
+    image: "/assets/actual-ceiling-finish-close.jpeg",
+    alt: "Interior ceiling and wall finish installation in a modern living space",
     copy:
-      "House ceilings, renovation work, brick laying, tiling, aluminium window frames, glass fitting, repairs, and clean finishing for new and existing spaces."
+      "House ceilings, interior finishes, brick laying, tiling, aluminium window frames, glass fitting, repairs, and clean finishing for new and existing spaces."
   },
   {
     number: "04",
@@ -102,9 +102,9 @@ const aluminiumShots = [
     label: "Aluminium door and glass"
   },
   {
-    image: "/assets/product-renovation-lighting.jpg",
-    alt: "Finished interior ceiling with lighting during renovation work",
-    label: "House ceilings and finishes"
+    image: "/assets/actual-ceiling-finish-close.jpeg",
+    alt: "Interior wall and ceiling finish with mounted TV feature wall",
+    label: "Ceilings and finishes"
   }
 ];
 
@@ -256,9 +256,9 @@ const productTiers = [
       },
       {
         name: "House Ceilings & Finishes",
-        image: "/assets/product-renovation-lighting.jpg",
-        alt: "Renovation interior with ceiling lights",
-        details: "House ceiling work, lighting, tiling, and final interior finishes."
+        image: "/assets/actual-ceiling-finish-wide.jpeg",
+        alt: "Interior ceiling and finish work in a completed living area",
+        details: "House ceiling work, TV-wall finishes, tiling, and final interior finishing support."
       }
     ]
   }
@@ -311,8 +311,9 @@ export default function Home() {
             <h2>Outdoor lighting leads, backed by solar, inverter, building, plumbing, and fencing work.</h2>
             <p>
               Get dependable flood lights, solar lighting, solar inverter installations, renovations, brick laying,
-              house ceilings, tiling, aluminium window frames, glass fitting, barbed wire fencing, chain-link fence
-              work, electric fence support, plumbing, geysers, BOQs, and plan drawing from one responsive team.
+              house ceilings, interior finishes, tiling, aluminium window frames, glass fitting, barbed wire fencing,
+              chain-link fence work, electric fence support, plumbing, geysers, BOQs, and plan drawing from one
+              responsive team.
             </p>
           </div>
           <div className="intro-stat">
@@ -359,13 +360,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="aluminium-showcase" aria-label="Aluminium frames, glass, and house ceilings">
+        <section className="aluminium-showcase" aria-label="Ceilings, finishes, aluminium frames, and glass">
           <div className="section-heading">
-            <span className="section-kicker">Construction finish</span>
-            <h2>Aluminium frames, glass, and house ceiling finishes.</h2>
+            <span className="section-kicker">Ceilings & finishes</span>
+            <h2>Ceilings, finishes, aluminium frames, and glass work.</h2>
             <p>
-              Topsum also handles aluminium window frames, glazed openings, house ceilings, and neat fitted finishes
-              for homes, extensions, and completed interior spaces.
+              Topsum also handles house ceilings, interior finish work, aluminium window frames, glazed openings, and
+              neat fitted details for homes, extensions, and completed living spaces.
             </p>
           </div>
           <div className="aluminium-grid">
@@ -558,8 +559,8 @@ export default function Home() {
       <footer className="site-footer">
         <p>
           &copy; 2026 Topsum Electricals. Flood lights, solar lights, solar inverters, fencing, electric fences,
-          plumbing, geysers, renovations, brick laying, house ceilings, aluminium window frames, glass fitting, bakery
-          equipment, BOQs, plan drawing, construction, and tiling.
+          plumbing, geysers, renovations, brick laying, house ceilings, interior finishes, aluminium window frames,
+          glass fitting, bakery equipment, BOQs, plan drawing, construction, and tiling.
         </p>
       </footer>
     </>
