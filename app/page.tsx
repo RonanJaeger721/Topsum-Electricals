@@ -191,6 +191,30 @@ const productTiers = [
     ]
   },
   {
+    tier: "Bakery equipment",
+    note: "Commercial bakery and prep equipment available for supply enquiries and WhatsApp ordering.",
+    products: [
+      {
+        name: "Double Deck Oven",
+        image: "/assets/product-bakery-double-deck-oven.jpeg",
+        alt: "Commercial double deck bakery oven",
+        details: "Double deck oven for bakery production, tray baking, and consistent daily output."
+      },
+      {
+        name: "Bakery Dough Mixer",
+        image: "/assets/product-bakery-dough-mixer.jpeg",
+        alt: "Commercial bakery dough mixer",
+        details: "Heavy-duty dough mixer for bread, buns, pastries, and other bakery prep work."
+      },
+      {
+        name: "Working Table",
+        image: "/assets/product-bakery-working-table.jpeg",
+        alt: "Bakery working table with lower shelf",
+        details: "Working table for dough prep, tray handling, equipment support, and bakery workspace organization."
+      }
+    ]
+  },
+  {
     tier: "Plumbing hardware & fittings",
     note: "Supply and installation support for plumbing jobs and bathroom work.",
     products: [
@@ -411,7 +435,7 @@ export default function Home() {
         <section className="hardware" id="hardware">
           <div className="section-heading">
             <span className="section-kicker">Hardware products</span>
-            <h2>Order lights, solar power gear, plumbing fittings, and planning support on WhatsApp.</h2>
+            <h2>Order lights, bakery equipment, plumbing fittings, and planning support on WhatsApp.</h2>
             <p>
               Products are grouped into clear tiers so customers can choose what they need and message Topsum directly
               for availability, wattage, pricing, and installation.
@@ -534,8 +558,8 @@ export default function Home() {
       <footer className="site-footer">
         <p>
           &copy; 2026 Topsum Electricals. Flood lights, solar lights, solar inverters, fencing, electric fences,
-          plumbing, geysers, renovations, brick laying, house ceilings, aluminium window frames, glass fitting, BOQs,
-          plan drawing, construction, and tiling.
+          plumbing, geysers, renovations, brick laying, house ceilings, aluminium window frames, glass fitting, bakery
+          equipment, BOQs, plan drawing, construction, and tiling.
         </p>
       </footer>
     </>

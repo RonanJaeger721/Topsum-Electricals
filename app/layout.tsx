@@ -19,11 +19,16 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://topsum-electricals.vercel.app"),
   title: "Topsum Electricals | Construction, Renovations & Lighting",
   description:
-    "Topsum Electricals provides flood light hardware, solar light products, flood light installation, plumbing, geysers, renovations, brick laying, BOQs, plan drawing, construction, and tiling services.",
+    "Topsum Electricals provides flood lights, solar lighting, solar inverters, plumbing, geysers, fencing, ceilings, aluminium frames, construction finishes, bakery equipment, BOQs, and plan drawing support.",
+  icons: {
+    icon: "/assets/topsum-logo.png",
+    shortcut: "/assets/topsum-logo.png",
+    apple: "/assets/topsum-logo.png"
+  },
   openGraph: {
     title: "Topsum Electricals",
     description:
-      "Flood light hardware, solar lights, plumbing, geysers, renovations, brick laying, BOQs, plan drawing, construction, and tiling.",
+      "Flood lights, solar lighting, solar inverters, plumbing, fencing, ceilings, aluminium frames, bakery equipment, BOQs, and plan drawing.",
     images: ["/assets/generated-hero.png"]
   }
 };
